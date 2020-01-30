@@ -1,0 +1,341 @@
+
+.burger-menu,
+.burger-menu.open {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  right: 50%;
+  bottom: 40px;
+  z-index: 9999;
+  background: #fff;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.burger-menu .bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.burger-menu.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+  transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.burger-menu.open .bar2 {
+  opacity: 0;
+}
+
+.burger-menu.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/* Menu */
+
+.menu {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 0px;
+}
+.menu ul {
+  position: relative;
+  top: 0px;
+  font-size: 24px;
+  padding: 0px;
+}
+.menu li {
+  list-style: outside none none;
+  margin: 10px 0px;
+  padding: 0;
+  cursor: pointer;
+}
+.menu li:hover {
+  color: #ff0000;
+}
+/*--test--*/
+body {
+  font-family: 'Amatic SC', cursive, Arial, serif;
+  font-size: 1.5em;
+  color: white;
+  background-color: black;
+  width: 90%;
+}
+
+h1 {
+  font-size: 3em;
+  color: #db1c27;
+  text-align: center;
+  padding: 0;
+  margin-top: 0;
+}
+#tent {
+  display: block;
+  margin: auto;
+  width: 6em;
+  padding: 0;
+}
+nav {
+  width: 70%;
+  background-color: white;
+  margin: auto;
+  border-radius: 1em;
+  font-weight: bolder;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: blue;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: black;
+}
+a:hover,
+#submit {
+  color: #db1c27;
+}
+
+.performances ul {
+  display: flex;
+  list-style: none;
+}
+.performances li {
+  width: 33%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+h2 {
+  margin-left: 5%;
+  font-size: 1.8em;
+  text-decoration: underline;
+  background-image: url(https://i.postimg.cc/1Rn5F4xK/Chapiteau.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 2em;
+  padding-left: 2em;
+}
+h3 {
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  border-color: white;
+  margin: auto;
+  max-width: 80%;
+}
+td,
+th {
+  border: 1px solid;
+  border-color: white;
+  width: 15%;
+  text-align: center;
+}
+.border {
+  border: none;
+}
+.image {
+  width: 90%;
+  height: auto;
+  border-radius: 1em;
+  display: flex;
+  margin: auto;
+}
+div {
+  margin-bottom: 1em;
+}
+#history_citation {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  text-align: justify;
+}
+#citation {
+  text-align: center;
+}
+cite {
+  font-size: 0.8em;
+  text-align: right;
+}
+fieldset {
+  width: 50%;
+  margin: 0.5em;
+  background-color: #db1c27;
+  border-radius: 1em;
+}
+
+#identification_reservation {
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+#identification,
+#your_reservation {
+  height: 14em;
+}
+#message {
+  display: flex;
+  margin: auto;
+  width: 66%;
+}
+input,
+select {
+  font-family: 'Amatic SC',cursive, Arial, serif;
+  font-size: 1em;
+  width: 100%;
+}
+legend {
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+textarea {
+	font-family: Amatic Sc, Arial, serif;
+	font-size: 1.4em;
+	width: 100%;
+}
+#submit {
+  display: block;
+  margin: auto;
+  margin-top: 0.5em;
+  width: 15%;
+  height: 2.2em;
+  font-size: 100%;
+  font-family: Amatic SC, Arial, serif;
+  color: white;
+  font-weight: bolder;
+  border-radius: 1em;
+  background-color: #db1c27;
+}
+hr {
+  width: 25%;
+  padding: 2px;
+  background: #db1c27;
+  border: none;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+footer {
+  text-align: center;
+}
+footer a{
+  color: white; 
+}
+.content {
+  background-color: black;
+}
+.popup-content {
+  background-color:transparent;
+}
+.modal{
+  background-color: black;
+}
+
+.buttonClass {
+  display: block;
+  margin: auto;
+  margin-top: 0.5em;
+  width: 15%;
+  height: 2.2em;
+  font-size: 100%;
+  font-family: Amatic SC, Arial, serif;
+  color: white;
+  font-weight: bolder;
+  border-radius: 1em;
+  background-color: #db1c27;
+}
+@media all and (max-width: 768px) {
+  
+  #identification_reservation {
+    flex-direction: column;
+    width: 95%;
+  }
+  fieldset {
+    width: 95%;
+  }
+  #citation {
+    display: none;
+  }
+}
+
+/*styliing innput number*/
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  border: 2px solid #ddd;
+  display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+}
+
+.number-input button {
+  outline:none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  width: 1rem;
+  height: 2px;
+  background-color: #212121;
+  transform: translate(-50%, -50%);
+}
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+  font-family: sans-serif;
+  max-width: 5rem;
+  padding: .5rem;
+  border: solid #ddd;
+  border-width: 0 2px;
+  font-size: 2rem;
+  height: 3rem;
+  font-weight: bold;
+  text-align: center;
+}

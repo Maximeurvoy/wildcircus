@@ -1,0 +1,6 @@
+wildcircus_back/node_modules
+wildcircus_front/node_modules
+wildcircus_back/package-lock.json
+wildcircus_front/package-lock.json
+wildcircus_back/config.js
+
