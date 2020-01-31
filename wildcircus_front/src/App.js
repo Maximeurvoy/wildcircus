@@ -31,7 +31,7 @@ class App extends React.Component {
       <>
         <Popup
           modal
-          overlayStyle={{ background: "rgba(255,255,255,0.98" }}
+          overlayStyle={{ background: "transparent"}} 
           closeOnDocumentClick={false}
           trigger={open => <BurgerIcon open={open} />}
         >

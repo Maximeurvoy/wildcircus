@@ -7,35 +7,35 @@ const Navbar = ({ close }) => {
   return (
     <>
     <div className="menu">
-    <ul>
+    <ul >
       <li>
-        <NavLink onClick={close} activeClassName="current" to="/">
-          WildPerformences
+        <NavLink onClick={close} className="current" to="/">
+          Wild Performences
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={close} activeClassName="current" to="nextshow">
-          NextShow
+        <NavLink onClick={close} className="current" to="nextshow">
+          Next Show
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={close} activeClassName="current" to="priceandreservation">
-          priceandreservation
+        <NavLink onClick={close} className="current" to="priceandreservation">
+          Price and Reservation
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={close} activeClassName="current" to="allnewshow">
-          allnewshow
+        <NavLink onClick={close} className="current" to="allnewshow">
+          All new show
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={close} activeClassName="current" to="aboutus">
-          AboutUs
+        <NavLink onClick={close} className="current" to="aboutus">
+          About us
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={close} activeClassName="current" to="contactus">
-          contactus
+        <NavLink onClick={close} className="current" to="contactus">
+          Contact us
         </NavLink>
       </li>
     </ul>

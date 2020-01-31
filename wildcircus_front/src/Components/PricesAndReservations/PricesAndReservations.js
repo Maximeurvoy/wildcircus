@@ -20,8 +20,8 @@ class PricesAndReservations extends React.Component {
     console.log(form)
     axios.post('http://localhost:3000/reservations', form)
       .then(() => console.log('pass'))
-      .then(()=> axios.get('http://localhost:3000/representations')
-      .then(result=>this.props.setData(result.data))
+      .then(() => axios.get('http://localhost:3000/representations')
+        .then(result => this.props.setData(result.data))
       )
   }
 
@@ -86,7 +86,7 @@ class PricesAndReservations extends React.Component {
 
         </div>
 
-        <form  >
+        <form className='reservationForm' >
 
           <div id="identification_reservation">
             <fieldset id="Réservation">
@@ -101,7 +101,7 @@ class PricesAndReservations extends React.Component {
               <legend>Your reservation</legend>
               <label for="city">city</label>:
               <select name="city" id="city" onChange={this.handleChange}>
-              <option >choose a city</option>
+                <option >choose a city</option>
 
                 {this.props.data.map((show, index) => <option key={index} value={show.ville}>{show.ville}</option>)}
               </select>
@@ -127,18 +127,27 @@ class PricesAndReservations extends React.Component {
         </form>
 
         {this.state.formOk &&
-          <Popup trigger={<button onClick={() => console.log(this.state)} id="submit" >Pass command </button>} modal>
+          <Popup trigger={<button className='reservationButton' onClick={() => console.log(this.state)} id="submit" >Command </button>} modal>
             {close => (
               <div className="modal">
-                <a className="close" onClick={close}>
+                {/* <a className="close" onClick={close}>
                   &times;
-        </a>
+        </a> */}
                 <div className="header"> Order Summary </div>
                 <div className="content">
                   Mrs/Mr {firstName} {lastName}<br />{email}<br />for the show of {city}<br />the {date} at {hour}<br />
                   {adultNumber} Adult<br />{childNumber} Child<br />TOTAL : {total} $
-        </div>
+                </div>
                 <div className="actions">
+                  <button
+                    className="buttonClass"
+                    onClick={() => {
+                      console.log("modal closed ");
+                      close();
+                    }}
+                  >
+                    Quit
+                   </button>
                   <button
                     className="buttonClass"
                     onClick={() => {
@@ -148,8 +157,9 @@ class PricesAndReservations extends React.Component {
                       close();
                     }}
                   >
-                    close modal
-          </button>
+                    payment
+                  </button>
+
                 </div>
               </div>
             )}
@@ -169,9 +179,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setData:(data)=> dispatch ({type:'SETDATA',payload: data})
+    setData: (data) => dispatch({ type: 'SETDATA', payload: data })
 
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(PricesAndReservations);
+export default connect(mapStateToProps, mapDispatchToProps)(PricesAndReservations);

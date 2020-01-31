@@ -4,8 +4,8 @@
   display: inline-block;
   cursor: pointer;
   position: fixed;
-  right: 50%;
-  bottom: 40px;
+  right: 45%;
+  bottom: 0.1em;
   z-index: 9999;
   background: #fff;
   padding: 10px;
@@ -20,7 +20,7 @@
   height: 3px;
   background-color: #333;
   margin: 4px 0;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 .burger-menu.open .bar1 {
@@ -37,6 +37,7 @@
   transform: rotate(45deg) translate(-6px, -6px);
 }
 
+
 /* Menu */
 
 .menu {
@@ -44,11 +45,12 @@
   display: block;
   text-align: center;
   padding: 0px;
+  border-radius: 25px;
 }
 .menu ul {
   position: relative;
   top: 0px;
-  font-size: 24px;
+  font-size: 2em;
   padding: 0px;
 }
 .menu li {
@@ -60,7 +62,11 @@
 .menu li:hover {
   color: #ff0000;
 }
-/*--test--*/
+.current{
+  text-decoration: none;
+  color: black;
+}
+--test--
 body {
   font-family: 'Amatic SC', cursive, Arial, serif;
   font-size: 1.5em;
@@ -70,7 +76,7 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   color: #db1c27;
   text-align: center;
   padding: 0;
@@ -79,6 +85,7 @@ h1 {
 #tent {
   display: block;
   margin: auto;
+  margin-top:2em;
   width: 6em;
   padding: 0;
 }
@@ -118,7 +125,7 @@ a:hover,
 }
 h2 {
   margin-left: 5%;
-  font-size: 1.8em;
+  font-size: 2em;
   text-decoration: underline;
   background-image: url(https://i.postimg.cc/1Rn5F4xK/Chapiteau.png);
   background-repeat: no-repeat;
@@ -237,9 +244,7 @@ footer a{
 .popup-content {
   background-color:transparent;
 }
-.modal{
-  background-color: black;
-}
+
 
 .buttonClass {
   display: block;
@@ -254,19 +259,12 @@ footer a{
   border-radius: 1em;
   background-color: #db1c27;
 }
-@media all and (max-width: 768px) {
-  
-  #identification_reservation {
-    flex-direction: column;
-    width: 95%;
-  }
-  fieldset {
-    width: 95%;
-  }
-  #citation {
-    display: none;
-  }
+
+.reservationForm{
+  width: 90%;
 }
+
+
 
 /*styliing innput number*/
 
@@ -338,4 +336,94 @@ input[type=number]::-webkit-outer-spin-button {
   height: 3rem;
   font-weight: bold;
   text-align: center;
+}
+
+/*NextShow*/
+.nextShow li{
+  font-size: 1.1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  list-style: none;
+  border: white solid 0.2px;
+  text-align: center;
+}
+.nextShow li span{
+  font-size:1.6em ;
+}
+.modal{
+  background-color: black;
+  text-align: center;
+}
+.actions{
+  display:flex;
+
+}
+.buttonClass{
+  width: 65%;
+  margin-bottom: 0.5em;
+}
+.buttonCross{
+  width: 15%;
+  margin-bottom: 0.5em;
+  color: white
+
+}
+.header{
+  font-size: 2em;
+}
+.content{
+  font-size: 1.3em;
+}
+.contact-form{
+    width: 90%;
+    margin: auto;
+}
+.contact-form input{
+  border-radius: 10px;
+}
+.contact-form textarea{
+  border-radius: 10px;
+  height:45vh ;
+}
+.submitMail{
+  width: 45%;
+  margin: auto;
+  margin-top: 1em;
+  margin-left: 5em;
+}
+.successModal{
+  /* position: fixed; */
+}
+@media all and (max-width: 768px) {
+
+  #identification_reservation {
+    flex-direction: column;
+    width: 100%;
+  }
+  #your_reservation {
+    height: 17em;
+  }
+  #submit {
+    margin-right: 1em;
+    width: 8em;
+  }
+  fieldset {
+    width: 95%;
+  }
+  #citation {
+    display: none;
+  }
+
+  .performances li {
+    width: 100%;
+    margin-left: 0;
+  }
+  .performances ul {
+    display: block;
+    list-style: none;
+    width: 80%;
+  }
+  table {
+    max-width: 90%;
+  }
 }

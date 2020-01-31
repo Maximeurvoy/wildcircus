@@ -11,13 +11,13 @@ class NextShow extends React.Component {
     console.log(this.props.data)
 
     return (
-      <>
+      <div className='nextShow'>
         <h2 id="performances">Next Show</h2>
         {this.props.data.map((show, index) =>
           <li style={{ color: show.places_dispo <= 15 && 'red' }}
-            key={index}>{show.ville} {Dateformat(show.date_representation, 'ddd mmm dS yyyy')}<br />
+            key={index}><span>{show.ville}</span> {Dateformat(show.date_representation, 'ddd mmm dS yyyy')}<br />
             {show.heure_representation}<br /> rest:{show.places_dispo <= 0 ? 'empty' : `${show.places_dispo} places`}</li>)}
-      </>
+      </div>
     )
   }
 };
